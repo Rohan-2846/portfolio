@@ -4,175 +4,222 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rohan Ghadage | Digital Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #f3f4f6;
-            --container-bg: #ffffff;
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --primary: #1e293b;
             --accent: #2563eb;
-            --text-dark: #111827;
-            --text-light: #4b5563;
-            --border-radius: 16px;
+            --secondary: #64748b;
+            --radius: 20px;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-dark); line-height: 1.6; padding: 40px 20px; }
-        
-        .main-wrapper { max-width: 800px; margin: 0 auto; }
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: var(--bg); 
+            color: var(--primary); 
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
 
-        /* Header / Profile Card */
-        .profile-card {
-            background: var(--container-bg);
+        .container { max-width: 900px; margin: 0 auto; }
+
+        /* Profile Section */
+        .profile-header {
+            background: var(--card);
             padding: 40px;
-            border-radius: var(--border-radius);
+            border-radius: var(--radius);
             text-align: center;
             margin-bottom: 24px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
         }
-        .profile-card h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 8px; }
-        .profile-card p { color: var(--text-light); font-size: 1.1rem; margin-bottom: 20px; }
-        
-        .social-pill-group { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
-        .pill { 
-            padding: 8px 16px; border-radius: 50px; text-decoration: none; 
-            font-size: 0.9rem; font-weight: 600; transition: 0.3s;
-            border: 1px solid #e5e7eb; color: var(--text-dark);
-        }
-        .pill:hover { background: var(--text-dark); color: white; }
 
-        /* Content Sections */
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 4px solid #fff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .profile-header h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: 8px; letter-spacing: -0.5px; }
+        .profile-header p { color: var(--secondary); font-weight: 500; margin-bottom: 24px; }
+
+        .links-flex { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+        .link-pill {
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            color: var(--primary);
+            transition: 0.2s;
+        }
+        .link-pill:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+        /* Bento Grid Sections */
         .section {
-            background: var(--container-bg);
-            padding: 32px;
-            border-radius: var(--border-radius);
+            background: var(--card);
+            padding: 30px;
+            border-radius: var(--radius);
             margin-bottom: 24px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         }
-        .section-title { font-size: 1.25rem; font-weight: 700; margin-bottom: 20px; border-bottom: 1px solid #f3f4f6; padding-bottom: 10px; color: var(--accent); }
 
-        /* List Items */
-        .item { margin-bottom: 24px; }
-        .item:last-child { margin-bottom: 0; }
-        .item-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 4px; }
-        .item-title { font-weight: 700; font-size: 1.1rem; }
-        .item-date { font-size: 0.85rem; color: var(--text-light); font-weight: 500; background: #f3f4f6; padding: 2px 8px; border-radius: 4px; }
-        .item-subtitle { font-size: 0.95rem; color: var(--text-light); margin-bottom: 8px; }
-        .item-desc { font-size: 0.9rem; color: #374151; }
-
-        /* Skills Tags */
-        .skill-group { display: flex; flex-wrap: wrap; gap: 8px; }
-        .skill-tag { background: #eff6ff; color: #1e40af; padding: 4px 12px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; }
-
-        /* Project Demo Button */
-        .btn-link { 
-            display: inline-block; margin-top: 12px; color: var(--accent); 
-            text-decoration: none; font-size: 0.85rem; font-weight: 700;
+        .section-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--accent);
         }
-        .btn-link:hover { text-decoration: underline; }
+
+        /* Content Styles */
+        .summary-text { font-size: 1rem; color: #475569; }
+
+        .experience-item { margin-bottom: 25px; }
+        .item-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 5px; }
+        .item-title { font-weight: 700; font-size: 1.05rem; }
+        .item-tag { font-size: 0.75rem; background: #f1f5f9; padding: 4px 10px; border-radius: 6px; font-weight: 700; color: var(--secondary); }
+        .item-subtitle { color: var(--secondary); font-size: 0.9rem; margin-bottom: 10px; }
+        
+        /* Project Cards */
+        .project-link {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        /* Skills */
+        .skill-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+        .skill-tag { 
+            background: #eff6ff; 
+            color: var(--accent); 
+            padding: 6px 14px; 
+            border-radius: 8px; 
+            font-size: 0.85rem; 
+            font-weight: 600; 
+        }
 
         @media (max-width: 600px) {
-            .item-header { flex-direction: column; gap: 4px; }
-            .profile-card { padding: 24px; }
+            .item-top { flex-direction: column; gap: 5px; }
+            .profile-header { padding: 30px 20px; }
         }
     </style>
 </head>
 <body>
 
-    <div class="main-wrapper">
-        <header class="profile-card">
+    <div class="container">
+        <header class="profile-header">
+            <img src="profile.jpg" alt="Rohan Ghadage" class="profile-img">
             <h1>Rohan Ghadage</h1>
-            <p>Full-Stack Developer & B.E. Information Technology Graduate</p>
-            <div class="social-pill-group">
-                <a href="mailto:rohanghadage24@gmail.com" class="pill">Email</a>
-                <a href="https://github.com/Rohan-2846" class="pill" target="_blank">GitHub</a>
-                <a href="#" class="pill">LinkedIn</a>
+            <p>B.E. IT Graduate & Full-Stack Developer</p>
+            <div class="links-flex">
+                <a href="mailto:rohanghadage24@gmail.com" class="link-pill">Email</a>
+                <a href="https://github.com/Rohan-2846" class="link-pill" target="_blank">GitHub</a>
+                <a href="#" class="link-pill">LinkedIn</a>
             </div>
         </header>
 
         <section class="section">
             <h2 class="section-title">Summary</h2>
-            <p class="item-desc">Recent B.E. Information Technology graduate with strong skills in Java, Python, MySQL, and full-stack development[cite: 5]. Experienced in web development internships and research projects, including IEEE-published work on dyslexia detection[cite: 6].</p>
+            <p class="summary-text">
+                Recent B.E. Information Technology graduate with strong skills in Java, Python, MySQL, and full-stack development. Experienced in web development internships and research projects, including IEEE-published work on dyslexia detection. [cite_start]Strong problem-solving, teamwork, and communication skills. [cite: 5, 6]
+            </p>
         </section>
 
         <section class="section">
-            <h2 class="section-title">Projects</h2>
+            <h2 class="section-title">Featured Projects</h2>
             
-            <div class="item">
-                <div class="item-header">
-                    <span class="item-title">Early Detection of Dyslexia in Children using ML & DL</span>
-                    <span class="item-date">IEEE 2025</span>
+            <div class="experience-item">
+                <div class="item-top">
+                    <span class="item-title">Early Detection of Dyslexia (ML & DL)</span>
+                    <span class="item-tag">IEEE 2025</span>
                 </div>
-                <p class="item-desc">Developed a web-based screening system using SVM & CNN models with 90%+ accuracy[cite: 16]. Published in IEEE ICCCNT 2025, IIT Indore[cite: 17].</p>
-                <a href="https://github.com/Rohan-2846/dyslexia-detection" class="btn-link" target="_blank">View GitHub Repository →</a>
+                <p class="summary-text">Developed a web-based screening system using SVM & CNN models with 90%+ accuracy. [cite_start]Published in IEEE ICCCNT 2025, IIT Indore. [cite: 16, 17]</p>
+                <a href="https://github.com/Rohan-2846/dyslexia-detection" class="project-link" target="_blank">Source Code →</a>
             </div>
 
-            <div class="item">
-                <div class="item-header">
+            <div class="experience-item">
+                <div class="item-top">
                     <span class="item-title">Web-Based Fitness Guidance Application</span>
-                    <span class="item-date">Live Project</span>
+                    <span class="item-tag">Vercel</span>
                 </div>
-                <p class="item-desc">Developed a responsive Fitness Web Application using React.js (Vite) to search and explore workout exercises[cite: 19]. Integrated exercise data through APIs and deployed on Vercel[cite: 20].</p>
-                <a href="https://fitness-app-pi-cyan.vercel.app/" class="btn-link" target="_blank">View Live Application →</a>
+                [cite_start]<p class="summary-text">Developed a responsive Fitness Web Application using React.js (Vite) to search and explore workout exercises. [cite: 19, 20]</p>
+                <a href="https://fitness-app-pi-cyan.vercel.app/" class="project-link" target="_blank">Live Demo →</a>
             </div>
 
-            <div class="item">
-                <div class="item-header">
-                    <span class="item-title">AI Healthcare Chatbot System</span>
-                    <span class="item-date">JETIR Publication</span>
+            <div class="experience-item">
+                <div class="item-top">
+                    <span class="item-title">AI Healthcare Chatbot & Voice Assistant</span>
+                    <span class="item-tag">Python</span>
                 </div>
-                <p class="item-desc">Built a Python chatbot system with voice-enabled interaction for healthcare queries[cite: 22]. Published in JETIR Journal, Vol 9[cite: 23].</p>
+                <p class="summary-text">Built a Python chatbot system with voice-enabled interaction for healthcare queries. [cite_start]Published in JETIR Journal. [cite: 21, 23]</p>
             </div>
         </section>
 
         <section class="section">
-            <h2 class="section-title">Work Experience</h2>
-            <div class="item">
-                <div class="item-header">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience-item">
+                <div class="item-top">
                     <span class="item-title">Web Developer Intern</span>
-                    <span class="item-date">2024</span>
+                    <span class="item-tag">6 Months</span>
                 </div>
                 <div class="item-subtitle">Edunet Foundation, Baramati</div>
-                <p class="item-desc">
-                    • Completed a 6-month internship in full-stack development[cite: 29].<br>
-                    • Utilized HTML, CSS, JavaScript, Bootstrap, SQL, and PHP to design applications[cite: 30].<br>
-                    • Built a robust job portal using Django[cite: 31].
+                <p class="summary-text">
+                    [cite_start]• Utilized HTML, CSS, JavaScript, Bootstrap, SQL, and PHP to design web applications. [cite: 30]<br>
+                    [cite_start]• Built a robust job portal using Django, demonstrating full-stack capabilities. [cite: 31]
                 </p>
             </div>
         </section>
 
         <section class="section">
-            <h2 class="section-title">Skills</h2>
-            <div class="skill-group">
-                <span class="skill-tag">Java</span> <span class="skill-tag">Python</span>
-                <span class="skill-tag">HTML/CSS</span> <span class="skill-tag">JavaScript (ES6+)</span>
-                <span class="skill-tag">MySQL</span> <span class="skill-tag">MERN Stack</span>
-                <span class="skill-tag">AWS</span> <span class="skill-tag">Django</span>
-                <span class="skill-tag">Adobe Suite</span> <span class="skill-tag">Operating Systems</span>
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skill-grid">
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">MERN Stack</span>
+                <span class="skill-tag">MySQL</span>
+                <span class="skill-tag">JavaScript (ES6+)</span>
+                <span class="skill-tag">AWS</span>
+                <span class="skill-tag">Django</span>
+                <span class="skill-tag">Adobe PS & AI</span>
             </div>
         </section>
 
         <section class="section">
             <h2 class="section-title">Education</h2>
-            <div class="item">
-                <div class="item-header">
-                    <span class="item-title">B.E. in Information Technology</span>
-                    <span class="item-date">2025 Grad</span>
+            <div class="experience-item">
+                <div class="item-top">
+                    <span class="item-title">B.E. Information Technology</span>
+                    <span class="item-tag">2025</span>
                 </div>
-                <div class="item-subtitle">Vidya Pratishthan's VPKBIET, Baramati</div>
-                <p class="item-desc">CGPA: 8.46</p>
+                <div class="item-subtitle">VPKBIET, Baramati</div>
+                [cite_start]<p class="summary-text">CGPA: 8.46 [cite: 8]</p>
             </div>
-            <div class="item">
-                <div class="item-header">
+            <div class="experience-item">
+                <div class="item-top">
                     <span class="item-title">Diploma in Computer Engineering</span>
-                    <span class="item-date">2022</span>
+                    <span class="item-tag">2022</span>
                 </div>
-                <div class="item-subtitle">MIT Polytechnic, Pune (MSBTE)</div>
-                <p class="item-desc">Percentage: 87.71% </p>
+                <div class="item-subtitle">MIT Polytechnic, Pune</div>
+                [cite_start]<p class="summary-text">Percentage: 87.71% [cite: 8]</p>
             </div>
         </section>
 
-        <footer style="text-align: center; padding: 20px; color: var(--text-light); font-size: 0.8rem;">
-            Contact: +91 9359044754 | Languages: English, Marathi, Hindi 
+        <footer style="text-align: center; color: var(--secondary); font-size: 0.8rem; padding: 20px;">
+            [cite_start]+91 9359044754 | rohanghadage24@gmail.com [cite: 2, 3]
         </footer>
     </div>
 
