@@ -1,84 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Rohan Ghadage | Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f4f7f9;
-            color: #333;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rohan Ghadage | Portfolio</title>
 
-        header {
-            background: #0f766e;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f6f9;
+    color: #333;
+}
 
-        nav {
-            background: #064e3b;
-            padding: 10px;
-            text-align: center;
-        }
+header {
+    background: linear-gradient(135deg, #0f766e, #14b8a6);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
+header h1 {
+    margin: 0;
+    font-size: 42px;
+}
 
-        nav a:hover {
-            color: #a7f3d0;
-        }
+header p {
+    font-size: 18px;
+    margin-top: 10px;
+}
 
-        section {
-            padding: 40px 20px;
-            max-width: 900px;
-            margin: auto;
-        }
+nav {
+    background: #064e3b;
+    padding: 12px;
+    text-align: center;
+}
 
-        h2 {
-            color: #0f766e;
-            border-bottom: 2px solid #0f766e;
-            display: inline-block;
-            margin-bottom: 20px;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
 
-        .card {
-            background: white;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        }
+nav a:hover {
+    color: #a7f3d0;
+}
 
-        ul {
-            padding-left: 20px;
-        }
+section {
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
 
-        footer {
-            background: #064e3b;
-            color: white;
-            text-align: center;
-            padding: 15px;
-        }
+h2 {
+    color: #0f766e;
+    border-bottom: 3px solid #0f766e;
+    display: inline-block;
+    margin-bottom: 25px;
+}
 
-        .skills span {
-            display: inline-block;
-            background: #ccfbf1;
-            color: #065f46;
-            padding: 8px 12px;
-            margin: 5px;
-            border-radius: 20px;
-            font-size: 14px;
-        }
-    </style>
+.card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.skills span, .badge {
+    display: inline-block;
+    background: #ccfbf1;
+    color: #065f46;
+    padding: 8px 14px;
+    margin: 6px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+footer {
+    background: #064e3b;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+</style>
 </head>
 
 <body>
@@ -86,64 +96,144 @@
 <header>
     <h1>Rohan Ghadage</h1>
     <p>Information Technology Graduate</p>
+    <p>Email: rohanghadage24@gmail.com | Phone: +91 9359044754</p>
 </header>
 
 <nav>
     <a href="#about">About</a>
     <a href="#experience">Experience</a>
     <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#publications">Publications</a>
     <a href="#education">Education</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#languages">Languages</a>
 </nav>
 
 <section id="about">
     <h2>About Me</h2>
     <div class="card">
         <p>
-            Recent B.E. Information Technology graduate with strong skills in Java, Python, MySQL, and full-stack development. 
-            Experienced in web development internships and IEEE research work on dyslexia detection.
+            Recent B.E. Information Technology graduate with strong skills in Java, Python, MySQL, and full-stack development.
+            Experienced in web development internships and research projects, including IEEE-published work on dyslexia detection.
+            Strong problem-solving, teamwork, and communication skills.
         </p>
-        <p><strong>Email:</strong> rohanghadage24@gmail.com</p>
-        <p><strong>Phone:</strong> +91 9359044754</p>
     </div>
 </section>
 
 <section id="experience">
     <h2>Experience</h2>
     <div class="card">
-        <h3>Web Developer Intern - Edunet Foundation</h3>
-        <p><strong>2025 - Present</strong></p>
+        <h3>Web Developer Intern – Edunet Foundation (2025 - Present)</h3>
         <ul>
-            <li>Worked on full-stack development projects</li>
-            <li>Used HTML, CSS, JavaScript, Bootstrap, SQL, PHP</li>
-            <li>Built a Job Portal using Django</li>
+            <li>Gained experience in full-stack development.</li>
+            <li>Utilized HTML, CSS, JavaScript, Bootstrap, SQL, and PHP.</li>
+            <li>Built a robust Job Portal using Django.</li>
         </ul>
     </div>
 </section>
 
 <section id="skills">
-    <h2>Skills</h2>
+    <h2>Technical Skills</h2>
     <div class="card skills">
         <span>Java</span>
         <span>Python</span>
         <span>HTML</span>
         <span>CSS</span>
-        <span>JavaScript</span>
+        <span>JavaScript (ES6+)</span>
         <span>MySQL</span>
-        <span>Django</span>
-        <span>MERN</span>
+        <span>DSA</span>
+        <span>OOP</span>
+        <span>MERN Stack</span>
+        <span>AWS</span>
+        <span>Adobe Photoshop</span>
+        <span>Adobe Illustrator</span>
+        <span>CorelDRAW</span>
+    </div>
+
+    <h2>Soft Skills</h2>
+    <div class="card skills">
+        <span>Problem Solving</span>
+        <span>Effective Communication</span>
+        <span>Leadership</span>
+        <span>Teamwork</span>
+        <span>Adaptability</span>
+        <span>Analytical Thinking</span>
+        <span>Creativity & Innovation</span>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="card">
+        <h3>Early Detection of Dyslexia using ML & DL</h3>
+        <p>Developed a web-based screening system using SVM & CNN models with 90%+ accuracy. Published in IEEE ICCCNT 2025, IIT Indore.</p>
+        <p><strong>Technologies:</strong> ML, DL, SVM, CNN</p>
+        <p><strong>GitHub:</strong> https://github.com/Rohan-2846/dyslexia-detection</p>
+    </div>
+
+    <div class="card">
+        <h3>Web-Based Fitness Guidance Application</h3>
+        <p>Developed a responsive Fitness Web Application using React.js (Vite). Integrated APIs and deployed on Vercel.</p>
+        <p><strong>Live Project:</strong> https://fitness-app-pi-cyan.vercel.app/</p>
+    </div>
+
+    <div class="card">
+        <h3>AI-based Healthcare Chatbot with Voice Assistant</h3>
+        <p>Built a Python chatbot system with voice-enabled interaction for healthcare queries. Published in JETIR Journal.</p>
+        <p><strong>Technology:</strong> Python</p>
+    </div>
+</section>
+
+<section id="publications">
+    <h2>Publications</h2>
+    <div class="card">
+        <h3>Early Detection of Dyslexia using ML & DL</h3>
+        <p>Published in IEEE ICCCNT 2025</p>
+    </div>
+
+    <div class="card">
+        <h3>AI-based Healthcare Chatbot System</h3>
+        <p>Published in JETIR Journal (2023)</p>
     </div>
 </section>
 
 <section id="education">
     <h2>Education</h2>
     <div class="card">
-        <h3>B.E. Information Technology</h3>
-        <p>Savitribai Phule Pune University</p>
+        <h3>Bachelor of Engineering (IT)</h3>
+        <p>Vidya Pratishthan’s Kamalnayan Bajaj Institute of Engineering & Technology, Baramati</p>
+        <p>GPA: 8.46 | Year: 2025</p>
+    </div>
+
+    <div class="card">
+        <h3>Diploma in Computer Engineering</h3>
+        <p>MIT Polytechnic, Pune (MSBTE)</p>
+        <p>Percentage: 87.71% | Year: 2022</p>
+    </div>
+</section>
+
+<section id="certifications">
+    <h2>Certifications</h2>
+    <div class="card skills">
+        <span>Foundation of Cybersecurity - Google (Coursera)</span>
+        <span>Amazon Web Services (AWS) Course</span>
+        <span>Robotic Process Automation Course</span>
+    </div>
+</section>
+
+<section id="languages">
+    <h2>Languages</h2>
+    <div class="card skills">
+        <span>English</span>
+        <span>Marathi</span>
+        <span>Hindi</span>
     </div>
 </section>
 
 <footer>
-    © 2026 Rohan Ghadage | Portfolio
+    © 2026 Rohan Ghadage | Portfolio Website
 </footer>
 
 </body>
