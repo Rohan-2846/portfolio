@@ -1,204 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rohan Ghadage Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohan Ghadage | Portfolio</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --accent: #3b82f6;
+            --text: #334155;
+        }
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            margin: 0;
+            background-color: #fff;
+        }
 
-<style>
+        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
 
-body{
-font-family:'Inter',sans-serif;
-margin:0;
-background:#f5f7fb;
-color:#111827;
-}
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: var(--light);
+            border-bottom: 1px solid #e2e8f0;
+        }
 
-nav{
-background:white;
-padding:18px 40px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-box-shadow:0 2px 10px rgba(0,0,0,0.05);
-}
+        h1 { margin: 0; color: var(--dark); font-size: 2.5rem; }
+        .contact-info { margin-top: 15px; color: var(--accent); font-weight: 500; }
+        .contact-info a { color: var(--accent); text-decoration: none; margin: 0 10px; }
 
-nav h2{margin:0;}
+        section { padding: 40px 0; border-bottom: 1px solid #f1f5f9; }
+        h2 { color: var(--dark); border-left: 4px solid var(--primary); padding-left: 15px; margin-bottom: 25px; }
 
-section{padding:50px 40px;}
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .card { background: #fff; padding: 20px; border: 1px solid #e2e8f0; border-radius: 8px; }
+        
+        .tag-container { display: flex; flex-wrap: wrap; gap: 8px; }
+        .tag { background: #e0e7ff; color: #4338ca; padding: 4px 12px; border-radius: 15px; font-size: 0.85rem; font-weight: 500; }
 
-.card{
-background:white;
-padding:30px;
-border-radius:12px;
-box-shadow:0 6px 20px rgba(0,0,0,0.04);
-margin-bottom:25px;
-}
-
-.hero{
-display:flex;
-align-items:center;
-gap:30px;
-background:white;
-padding:60px 40px;
-border-bottom:1px solid #e5e7eb;
-}
-
-.hero img{
-width:140px;
-height:140px;
-border-radius:50%;
-object-fit:cover;
-border:4px solid #e5e7eb;
-}
-
-.skills span{
-display:inline-block;
-background:#eef2ff;
-color:#3730a3;
-padding:7px 12px;
-border-radius:20px;
-margin:6px;
-font-size:14px;
-}
-
-.projects{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:20px;
-}
-
-.project{
-background:white;
-padding:22px;
-border-radius:12px;
-box-shadow:0 6px 20px rgba(0,0,0,0.04);
-}
-
-footer{
-text-align:center;
-padding:25px;
-color:#6b7280;
-}
-
-</style>
+        .edu-item, .job-item { margin-bottom: 20px; }
+        .date { color: #64748b; font-size: 0.9rem; font-weight: bold; }
+        
+        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
+    </style>
 </head>
-
 <body>
 
-<nav>
-<h2>Rohan Ghadage</h2>
-</nav>
+    <header>
+        [cite_start]<h1>ROHAN GHADAGE</h1> [cite: 1]
+        <div class="contact-info">
+            [cite_start]<span>📞 +91 9359044754</span> [cite: 2] | 
+            [cite_start]<span>📧 rohanghadage24@gmail.com</span> [cite: 3]
+            <br>
+            <a href="#">LinkedIn</a> | [cite_start]<a href="#">GitHub</a> [cite: 3]
+        </div>
+    </header>
 
-<div class="hero">
+    <div class="container">
+        <section id="summary">
+            <h2>Summary</h2>
+            <p>Recent B.E. [cite_start]Information Technology graduate with strong skills in Java, Python, MySQL, and full-stack development. [cite: 5] [cite_start]Experienced in web development internships and research projects, including IEEE-published work on dyslexia detection. [cite: 6] [cite_start]Strong problem-solving, teamwork, and communication skills. [cite: 6]</p>
+        </section>
 
-<img src="profile.jpg" alt="Rohan Photo">
+        <section id="education">
+            <h2>Education</h2>
+            <div class="edu-item">
+                [cite_start]<strong>Bachelor of Engineering in Information Technology</strong> [cite: 8]
+                [cite_start]<div class="date">2025</div> [cite: 8]
+                <p>Vidya Pratishthan's Kamalnayan Bajaj Institute of Engineering and Technology, Baramati | [cite_start]<strong>CGPA: 8.46</strong></p> [cite: 8]
+            </div>
+            <div class="edu-item">
+                [cite_start]<strong>Diploma in Computer Engineering</strong> [cite: 8]
+                [cite_start]<div class="date">2022</div> [cite: 8]
+                <p>MIT Polytechnic, Pune (MSBTE) | [cite_start]<strong>87.71%</strong></p> [cite: 8]
+            </div>
+        </section>
 
-<div>
-<h1>Rohan Ghadage</h1>
-<p>B.E. Information Technology Graduate | Full Stack Developer</p>
+        <section id="skills">
+            <h2>Skills</h2>
+            <h3>Technical</h3>
+            <div class="tag-container">
+                [cite_start]<span class="tag">Java</span> <span class="tag">HTML/CSS</span> <span class="tag">JavaScript (ES6+)</span> [cite: 11]
+                [cite_start]<span class="tag">MySQL</span> <span class="tag">DSA</span> <span class="tag">OOPs</span> [cite: 11]
+                [cite_start]<span class="tag">MERN Stack</span> <span class="tag">AWS</span> <span class="tag">Adobe PS & AI</span> [cite: 11]
+                [cite_start]<span class="tag">Coreldraw</span> [cite: 11]
+            </div>
+            <h3>Soft Skills</h3>
+            <div class="tag-container" style="margin-top: 10px;">
+                [cite_start]<span class="tag">Problem Solving</span> <span class="tag">Leadership</span> <span class="tag">Adaptability</span> [cite: 13]
+                [cite_start]<span class="tag">Time Management</span> <span class="tag">Communication</span> [cite: 13]
+            </div>
+        </section>
 
-<p>
-📞 +91 9359044754<br>
-📧 rohanghadage24@gmail.com
-</p>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="grid">
+                <div class="card">
+                    [cite_start]<strong>Detection of Dyslexia (ML & DL)</strong> [cite: 15]
+                    <ul>
+                        [cite_start]<li>Web-based screening using SVM & CNN (90%+ accuracy). [cite: 16]</li>
+                        [cite_start]<li>Published in IEEE ICCCNT 2025, IIT Indore. [cite: 17]</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    [cite_start]<strong>Web-Based Fitness Guidance App</strong> [cite: 18]
+                    <ul>
+                        [cite_start]<li>Built with React.js (Vite) and integrated APIs. [cite: 19, 20]</li>
+                        [cite_start]<li>Deployed on Vercel. [cite: 20]</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    [cite_start]<strong>Healthcare Chatbot (Python)</strong> [cite: 21]
+                    <ul>
+                        [cite_start]<li>AI chatbot with Voice Assistant features. [cite: 22]</li>
+                        [cite_start]<li>Published in JETIR Journal, Vol 9. [cite: 23]</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-</div>
+        <section id="experience">
+            <h2>Internships</h2>
+            <div class="job-item">
+                <strong>Web Developer Intern | [cite_start]Edunet Foundation</strong> [cite: 25, 26]
+                [cite_start]<div class="date">2024 (6 Months)</div> [cite: 27, 29]
+                <ul>
+                    [cite_start]<li>Used HTML, CSS, JS, Bootstrap, SQL, and PHP for web apps. [cite: 30]</li>
+                    [cite_start]<li>Built a robust job portal using Django. [cite: 31]</li>
+                </ul>
+            </div>
+        </section>
 
-</div>
+        <section id="achievements">
+            <h2>Achievements & Languages</h2>
+            <ul>
+                [cite_start]<li>Google Cybersecurity Certification (Coursera). [cite: 33]</li>
+                [cite_start]<li>Amazon Web Services (AWS) Certificate. [cite: 34]</li>
+                [cite_start]<li>Robotics Process Automation (RPA) Course. [cite: 35]</li>
+                [cite_start]<li><strong>Languages:</strong> English, Marathi, Hindi. [cite: 36, 37]</li>
+            </ul>
+        </section>
+    </div>
 
-<section>
-
-<div class="card">
-<h2>Summary</h2>
-<p>
-Recent B.E. Information Technology graduate with strong skills in Java, Python, MySQL, and full-stack development.
-Experienced in internships and IEEE research work. Strong problem-solving and teamwork skills.
-</p>
-</div>
-
-<div class="card">
-<h2>Education</h2>
-<p><b>B.E Information Technology — 2025</b><br>KBIEET Baramati — CGPA 8.46</p>
-<p><b>Diploma Computer Engineering — 2022</b><br>MIT Polytechnic — 87.71%</p>
-</div>
-
-<div class="card">
-<h2>Skills</h2>
-
-<div class="skills">
-<span>Java</span>
-<span>Python</span>
-<span>HTML</span>
-<span>CSS</span>
-<span>JavaScript</span>
-<span>MySQL</span>
-<span>MERN</span>
-<span>AWS</span>
-<span>DSA</span>
-<span>OOP</span>
-<span>Operating Systems</span>
-</div>
-
-</div>
-
-<div class="card">
-<h2>Internship</h2>
-
-<p><b>Web Developer Intern — Edunet Foundation</b></p>
-<ul>
-<li>6 month full stack internship</li>
-<li>Worked with HTML CSS JS SQL PHP Django</li>
-<li>Built job portal</li>
-</ul>
-
-</div>
-
-<div class="card">
-<h2>Projects</h2>
-
-<div class="projects">
-
-<div class="project">
-<h3>Dyslexia Detection System</h3>
-<p>ML based screening system using CNN & SVM — IEEE Published.</p>
-</div>
-
-<div class="project">
-<h3>Fitness Guidance App</h3>
-<p>React workout search app deployed on Vercel.</p>
-</div>
-
-<div class="project">
-<h3>Healthcare Chatbot</h3>
-<p>Python NLP chatbot with voice assistant.</p>
-</div>
-
-</div>
-
-</div>
-
-<div class="card">
-<h2>Achievements</h2>
-<ul>
-<li>Google Cybersecurity Certification</li>
-<li>AWS Course Certification</li>
-<li>RPA Certification</li>
-</ul>
-</div>
-
-<div class="card">
-<h2>Languages</h2>
-<p>English • Marathi • Hindi</p>
-</div>
-
-</section>
-
-<footer>
-© 2025 Rohan Ghadage
-</footer>
+    <footer style="text-align: center; padding: 20px; background: var(--dark); color: white;">
+        <p>&copy; 2025 Rohan Ghadage</p>
+    </footer>
 
 </body>
 </html>
